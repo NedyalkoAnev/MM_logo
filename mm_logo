@@ -1,0 +1,36 @@
+n = int(input())
+if n < 2:
+    print("Not correct value")
+elif n > 10000:
+    print("Not correct value")
+elif (n % 2) == 0:
+    print("Not correct value")
+else:
+    stars = n
+    dash = n
+    first_middle_last_dash = n
+print("{0}{1}{2}{3}{4}{4}{3}{2}{1}{0}".format(first_middle_last_dash * '-', stars * '*', dash * '-', stars * '*', first_middle_last_dash * '-',
+                                              first_middle_last_dash * '-', stars * '*', dash * '-', stars * '*', first_middle_last_dash * '-' ))
+for i in range(n // 2):
+    dash -= 2
+    stars += 2
+    first_middle_last_dash -= 1
+    print("{0}{1}{2}{3}{4}{4}{3}{2}{1}{0}".format(first_middle_last_dash * '-', stars * '*', dash * '-', stars * '*',
+                                                  first_middle_last_dash * '-', first_middle_last_dash * '-', stars * '*', dash * '-' ,
+                                                  stars * '*', first_middle_last_dash * '-' ))
+for c in range(n // 2):
+    dash = 1
+    stars = n
+    first_middle_last_dash = n // 2
+    middle_stars = (2 * n) -1
+print("{0}{1}{2}{3}{4}{5}{6}{6}{5}{4}{3}{2}{1}{0}".format(first_middle_last_dash * "-", stars *'*', dash * '-', middle_stars * '*', dash * '-',
+                                                          stars * '*', first_middle_last_dash * '-', first_middle_last_dash * '-', stars * '*',
+                                                          dash * '-', middle_stars * '*', dash * '-', stars * '*', first_middle_last_dash * '-' ))
+for c in range(n // 2):
+    dash += 2
+    stars = n
+    first_middle_last_dash -= 1
+    middle_stars -= 2
+    print("{0}{1}{2}{3}{4}{5}{6}{6}{5}{4}{3}{2}{1}{0}".format(first_middle_last_dash * '-', stars * '*', dash * '-', middle_stars * '*', dash * '-',
+                                                              stars * '*', first_middle_last_dash * '-', first_middle_last_dash * '-', stars * '*',
+                                                              dash * '-', middle_stars * '*', dash * '-', stars * '*', first_middle_last_dash * '-'))
